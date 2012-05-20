@@ -6,6 +6,25 @@ class Calculator(val initialValue: Int) {
 	def execute(number: Int)(operation: (Int, Int) => Int) : Int = {
 		operation(number, initialValue)
 	}
+
+	def add(number: Int) = initialValue + number
+
+	// cannot end a method name with ":"" unless we proceed it with underscore or its an operator
+	// this method may be used like this: number add_: Calculator instance
+	def add_:(number: Int) = this.add(number)
+
+	// operator does not need to end with "_" before ":"
+	// 2 +: (Calculator instance)
+	def +:(number: Int) = this.add(number)
+
+	// unary operators:
+    //      val a = new Calculator(-10)
+    //      +a => 10
+	def unary_+ = initialValue.abs
+
+	def unary_- = -initialValue
+
+	def unary_~ = 1/initialValue
 }
 
 object Calculator {

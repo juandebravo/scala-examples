@@ -1,11 +1,8 @@
 package com.example.test
 
-import com.example.classes.Vehicle
-import com.example.classes.Motorcycle
-import com.example.classes.Car
-import com.example.classes.Mercedes
-import com.example.classes.Renault
-import com.example.classes.Train
+// import every Class
+import com.example.classes._
+
 import org.scalatest.Suite
 
 class CarTest extends Suite {

@@ -1,7 +1,9 @@
 package com.example.companion
 
 class Discipline private(val name: String) {
+
 	override def toString() : String = "discipline name " + name
+
 }
 
 // Companion object. Provide class-level convenience methods
@@ -14,5 +16,6 @@ object Discipline {
 	)
 
 	// syntax sugar. This method is invoked directly calling Discipline(<discipline_string>)
+	// this method si called "factory method"
 	def apply(discipline: String) = if (disciplines.contains(discipline)) disciplines(discipline) else null
 }

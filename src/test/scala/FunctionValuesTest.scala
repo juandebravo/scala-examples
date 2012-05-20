@@ -36,4 +36,19 @@ class FunctionValuesTest extends Suite {
     	assert(Calculator.executeClosure(1,2,3) == 6)
     }
 
+    def testMethodNameConvention() {
+        val value = new Calculator(10)
+        assert(value.add(2) == 12)
+        assert((2 add_: value) == 12)
+
+        assert((2 +: value) == 12)
+    }
+
+    def testUnaryMethods() {
+        val value = new Calculator(-10)
+        assert(+value == 10)
+        assert(-value == 10)
+        assert(~value == -1/10)
+    }
+
 }
