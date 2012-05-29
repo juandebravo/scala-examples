@@ -122,6 +122,8 @@ class ListTest extends Suite {
 
     def testForLoopDefineVariable() {
         val names = Vector("John", "Mathew", "George", "Peter")
+
+        // list comprehension
         val initialLetters = for(name <- names; initialLetter = name(0)) yield initialLetter
 
         print(initialLetters)
