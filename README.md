@@ -2,7 +2,7 @@
 
 You will find some not really useful examples showing Scala basic syntax sugar.
 
-These examples were developed while reading Programiming Scala (The Pragmatic Programmers).
+These examples were developed while reading Programming Scala (The Pragmatic Programmers).
 
 # How to use
 
